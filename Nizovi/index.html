@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<h1>Nizovi u JavaScriptu</h1>
+
+<div id="imena">Ana, Nikola, Milica, Milos, Teodora, Goran</div>
+
+<h3>Unesi novo ime:</h3>
+<input type="text" id="imeInput" placeholder="Unesi novo ime">
+
+<div class="dugmad">
+    <button onclick="dodaj()">Dodaj</button>
+    <button onclick="obrisi()">Obrisi</button>
+    <button onclick="razmesti()">Razmesti</button>
+    <button onclick="sortiraj()">Sortiraj</button>
+</div>
+
+<script>
+
+let imena = ['Ana', 'Teodora', 'Marko', 'Tamara'];
+
+const prikaz = document.getElementById('rezultati');
+
+prikaz.innerHTML = imena.join(' ! ');
+
+const input = document.getElementById('unesi');
+const dodajNovoImeDugme = document.getElementById('dodaj');
+
+dodajNovoImeDugme.addEventListener('click', function() {
+    let unosKorisnika = input.value;
+    imena.push(unosKorisnika);
+    console.log(imena);
+    prikaz.innerHTML = imena.join(' ! ');
+});
+
+
+
+
+</script>
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
